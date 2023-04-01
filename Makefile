@@ -1,11 +1,21 @@
 stack:
+	@echo
+	@echo ================================================================================
+	@echo      PILHA DINAMICA: PROVA 1
+	@echo ================================================================================
+	@echo Compilando o programa stack
+	gcc --std=c99 -DLOG_USE_COLOR log.h log.c GenericDynamicStack.c GenericDynamicStack.h GenericDynamicStackTest.c -o stack
+	@echo Tornando o arquivo executável
+	chmod +x stack
+	@echo Executando o programa stack
+	@echo ================================================================================
+	@echo
+	./stack
 
-gcc --std=c99 GenericDynamicStack.c GenericDynamicStack.h GenericDynamicStackTest.c -o stack
-chmod +x stack
-./stack
-
-linkedlist:
-
-gcc --std=c99 -DLOG_USE_COLOR log.h log.c linkedList.h - o linkedlist
-chmod +x linkedlist
-./linkedlist
+clean:
+	@echo
+	@echo ================================================================================
+	@echo APAGANDO TODOS OS PROGRAMAS
+	@echo ================================================================================
+	@echo Removendo o programa stack
+	rm -f stack
