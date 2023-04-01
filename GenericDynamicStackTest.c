@@ -6,11 +6,18 @@
 
 int main(){
     GenericDynamicStack stack;
-
+    void *aux = (void*) 1;//add um transformador de tipo
+    //push(&stack, aux);
+    pop(&stack);
+    top(&stack);
     init(&stack);
 
-    void *aux = 1;
 
     push(&stack, aux);
+    top(&stack);
 
+    pop(&stack);
+    aux = (void*) 10;
+    push(&stack, aux);
+    top(&stack);
 }
